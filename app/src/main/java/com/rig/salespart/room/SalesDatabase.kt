@@ -13,9 +13,9 @@ abstract class SalesDatabase:RoomDatabase() {
         private var INSTANCE : SalesDatabase?=null
         fun getInstance(context: Context):SalesDatabase?{
             synchronized(this){
-                var instace = INSTANCE
+                var instance = INSTANCE
                 if(INSTANCE == null){
-                    instace = Room.databaseBuilder(
+                    instance = Room.databaseBuilder(
                         context.applicationContext,
                         SalesDatabase::class.java,
                         "sales_database"
